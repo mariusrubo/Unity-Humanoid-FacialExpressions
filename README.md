@@ -1,6 +1,8 @@
 # Purpose
-These scripts allow Unity 3D beginners to make a character created with Autodesk Character Generator look happy, sad, angry, 
+These scripts allow you to make a character created with Autodesk Character Generator look happy, sad, angry, 
 fearful or surprised.
+
+![Alt text](https://github.com/mariusrubo/Unity-Humanoid-FacialExpressions/blob/master/FacialExpressions.jpg)
 
 # Installation
 * The character must have a Skinned Mesh Renderer with facial blendshapes. The script should work plug-and-play for characters from 
