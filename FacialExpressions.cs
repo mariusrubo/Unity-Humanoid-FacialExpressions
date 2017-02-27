@@ -116,8 +116,8 @@ public class FacialExpressions : MonoBehaviour {
             intensityLastFrame = intensity;
 
 
-            //if (Expression == 1) { Ziel = Happy; } //so geht es nicht, denn dann wird Happy komischerweise überschrieben, sobald man Ziel damit gleichsetzt. Stattdessen muss ich wohl alles loopen:
-            if (expression == 0) { for (int i = 0; i < 67; i++) { BlendshapesGoal[i] = Neutral[i]; } } //hier bis 67, also auch den BlinkValue
+            //if (Expression == 1) { Ziel = Happy; } // setting entire array w/o looping does not work robustly
+            if (expression == 0) { for (int i = 0; i < 67; i++) { BlendshapesGoal[i] = Neutral[i]; } } //up to value 67, the BlinkValue
             if (expression == 1) { for (int i = 0; i < 67; i++) { BlendshapesGoal[i] = Happy[i]; } }
             if (expression == 2) { for (int i = 0; i < 67; i++) { BlendshapesGoal[i] = Sad[i]; } }
             if (expression == 3) { for (int i = 0; i < 67; i++) { BlendshapesGoal[i] = Angry[i]; } }
@@ -138,7 +138,7 @@ public class FacialExpressions : MonoBehaviour {
         BlinkTicker++;
         if ((BlinkTicker == 0) || (BlinkTicker == 2))
         {
-            skinnedMeshRenderer.SetBlendShapeWeight(45, BlendshapesGoal[66] * 0.6f); //statt Ziel[66] ehemals BlinkValues[Expression]
+            skinnedMeshRenderer.SetBlendShapeWeight(45, BlendshapesGoal[66] * 0.6f); 
             skinnedMeshRenderer.SetBlendShapeWeight(46, BlendshapesGoal[66] * 0.6f);
         }
         if (BlinkTicker == 1)
