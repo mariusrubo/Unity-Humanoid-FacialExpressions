@@ -101,8 +101,8 @@ public class FacialExpressions : MonoBehaviour {
     /// <param name="expression">expression index: 0 (neutral), 1 (happy), 2 (sad), 3 (angry), 4 (fearful), 5 (surprised). </param>
     /// <param name="intensity">value from 0 to 1, stating intensity of expression.</param>
     /// <param name="lerpSpeed">value from 0 to 1, stating speed of lerping from one expression to another. Close to 0: very small. Larger than 0.2: very fast.</param>
-    /// <param name="blinkmin">minimum nuber of frames between eye blinks.</param>
-    /// <param name="blinkmax">maximum nuber of frames between eye blinks.</param>
+    /// <param name="blinkmin">minimum number of frames between eye blinks.</param>
+    /// <param name="blinkmax">maximum number of frames between eye blinks.</param>
     /// </summary>
     public void Expression(int expression, float intensity, float lerpSpeed, int blinkmin, int blinkmax)
     {
